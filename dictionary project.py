@@ -9,12 +9,12 @@ items = [
 {
     "name": "apples",
     "price": 12.50,
-    "aisle": "vegetables"
+    "aisle": "fruits"
 },
 {
     "name": "strawberry",
     "price": 12.50,
-    "aisle": "vegetables"
+    "aisle": "fruits"
 },
 {
     "name": "lettuce",
@@ -28,6 +28,12 @@ items = [
 },
 ]
 
-for index, items in enumerate(items, start=0):
-    print(items["name"])
+for index, items in enumerate(items, start=1):
+    print(items ["name"],end=" ")
+    print(items ["price"])
+
+cart = []
+
 purchase = input("What will you put in your cart?: ")
+for items in purchase:
+    print("This is what is in your cart: ", items)
