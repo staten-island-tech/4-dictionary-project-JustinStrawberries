@@ -28,12 +28,19 @@ items = [
 },
 ]
 
-for index, items in enumerate(items, start=1):
-    print(items ["name"],end=" ")
-    print(items ["price"])
+for a, i in enumerate(items):
+    print(a, ":", i["name"])
+    # print(stuff["price"])
 
-cart = []
-
+found = False
 purchase = input("What will you put in your cart?: ")
-for items in purchase:
-    print("This is what is in your cart: ", items)
+
+for purchase in items["names"]:
+    print("This is what is in your cart: ", purchase)
+    found = True
+    break
+
+if not found:
+    print("No match")
+
+
