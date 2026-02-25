@@ -32,15 +32,19 @@ for a, i in enumerate(items):
     print(a, ":", i["name"])
     # print(stuff["price"])
 
-found = False
+# while input not in items:
+#     stuff = input("What wold you like in your cart")
+
+# def skibidi():
+#     if stuff not in items:
+#         return
+
+
 purchase = input("What will you put in your cart?: ")
-
-for purchase in items["names"]:
+cart = []
+if purchase in "name":
     print("This is what is in your cart: ", purchase)
-    found = True
-    break
-
-if not found:
+else:
     print("No match")
 
 
