@@ -25,26 +25,32 @@ items = [
     "name": "raddish",
     "price": 12.50,
     "aisle": "vegetables"
-},
+}
 ]
 
-for a, i in enumerate(items):
-    print(a, ":", i["name"])
-    # print(stuff["price"])
+for a in items:
+    print(a["name"])
 
-# while input not in items:
-#     stuff = input("What wold you like in your cart")
-
-# def skibidi():
-#     if stuff not in items:
-#         return
-
-
-purchase = input("What will you put in your cart?: ")
 cart = []
-if purchase in "name":
-    print("This is what is in your cart: ", purchase)
-else:
-    print("No match")
+while True:
+    purchase = input("What will you put in your cart?: ")
+
+    if purchase == "done":
+        break
+
+found = False
+
+for a in items:
+    if purchase == a["name"]:
+        found = True
+        purchase = input("What else will you put in your cart?: ")
+        break
+
+    if not found:
+        print ("Item is not found")
+        purchase = input("What will you put in your cart?: ")
+
+
+
 
 
