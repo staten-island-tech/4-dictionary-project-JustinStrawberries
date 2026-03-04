@@ -32,12 +32,7 @@ for a in items:
     print(a["name"])
 
 cart = []
-while True:
-    purchase = input("What will you put in your cart?: ")
-
-    if purchase == "done":
-        break
-
+purchase = input("What will you put in your cart?: ")
 found = False
 
 for a in items:
@@ -49,8 +44,4 @@ for a in items:
     if not found:
         print ("Item is not found")
         purchase = input("What will you put in your cart?: ")
-
-
-
-
-
+        break
